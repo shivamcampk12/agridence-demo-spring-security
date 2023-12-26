@@ -18,8 +18,7 @@ import java.util.*;
 @ToString
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "users", uniqueConstraints = {
-        @UniqueConstraint(name = "unique_username", columnNames = {"username"})})
+@Table(name = "users")
 public class User implements Serializable, UserDetails {
 
     @Id

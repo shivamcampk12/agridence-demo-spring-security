@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "64550887-00ec-4047-9e3c-0edc1e232ffe",
+    "name": "Agridence-Demo-Spring-Security",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12339966"
+  },
+  "item": [
+    {
+      "name": "RegisterNewUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Shivam Verma\",\n    \"username\": \"testusername1\",\n    \"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/user/register",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "user",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginNewUser",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testusername1\",\n    \"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/user/login",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "user",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Notes",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Note 5\",\n    \"description\": \"Note 2 description\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/note/add",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "note",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Note",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/note/delete/6",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "note",
+            "delete",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET ALL NOTES",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/note/getAllNotes",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "note",
+            "getAllNotes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET NOTE DETAILS",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{URL}}:{{PORT}}/note/noteDetails/7",
+          "protocol": "http",
+          "host": [
+            "{{URL}}"
+          ],
+          "port": "{{PORT}}",
+          "path": [
+            "note",
+            "noteDetails",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "AuthToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "URL",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "PORT",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
