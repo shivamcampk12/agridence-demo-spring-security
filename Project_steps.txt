@@ -1,0 +1,11 @@
+
+Docker command to create Db
+
+docker exec -it agridence-springboot-assignment-backend-db-1 psql -U postgres -d postgres -c "CREATE DATABASE assignmentspringsecurity;"
+
+
+Table drop sequence
+drop table public.users_roles;
+drop table public.roles;
+drop table public.notes;
+drop table public.users;
